@@ -27,7 +27,7 @@ class SplashScreenFragment : Fragment() {
                 replace(R.id.fragmentContainer, LoginFragment())
                     .commit()
             }
-        }, 1000)
+        }, 100)
 
         return binding.root
     }

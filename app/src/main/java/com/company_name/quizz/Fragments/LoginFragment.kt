@@ -2,18 +2,19 @@ package com.company_name.quizz.Fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import com.company_name.quizz.Login.LoginCredentials
+import com.company_name.quizz.HomeScreenActivity
 import com.company_name.quizz.Login.LoginViewModel
-import com.company_name.quizz.MainActivity2
 import com.company_name.quizz.R
 import com.company_name.quizz.databinding.FragmentLoginBinding
-import kotlin.concurrent.fixedRateTimer
+import kotlin.system.exitProcess
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
@@ -38,7 +39,9 @@ class LoginFragment : Fragment() {
                             Toast.LENGTH_LONG
                         ).show()
                         //move to home screen of quiz
-
+                        val intent = Intent(requireContext(), HomeScreenActivity::class.java)
+                        intent.putExtra("username", binding.username.text.toString())
+                        startActivity(intent)
                     } else {
                         Toast.makeText(
                             requireContext(),
@@ -54,6 +57,13 @@ class LoginFragment : Fragment() {
                 replace(R.id.fragmentContainer, SignUpFragment())
                     .commit()
             }
+        }
+
+        //exit app
+        binding.exitBtn.setOnClickListener {
+            Handler(Looper.getMainLooper()).postDelayed({
+                exitProcess(0)
+            }, 200)
         }
 
         return binding.root

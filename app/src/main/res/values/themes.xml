@@ -21,5 +21,14 @@
         <item name="cornerRadius">50dp</item>
     </style>
 
+    <style name="cardViewHomeScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+       <item name="android:topRightRadius">60dp</item>
+        <item name="android:topLeftRadius">60dp</item>
+        <item name="android:radius">100dp</item>
+    </style>
+
+
+
 
 </resources>
