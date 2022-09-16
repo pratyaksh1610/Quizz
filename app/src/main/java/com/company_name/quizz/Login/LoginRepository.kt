@@ -9,9 +9,18 @@ class LoginRepository (private val dao:LoginDao) {
         dao.insert(login)
     }
 
-    fun check(username:String,password:String): LiveData<List<LoginCredentials>> {
-        return dao.check(username,password)
+    fun checkIfUserIsRegistered(username:String,password:String): LiveData<List<LoginCredentials>> {
+        return dao.checkIfUserIsRegistered(username,password)
     }
+    fun checkUsernameExists(username:String): LiveData<List<LoginCredentials>>{
+        return dao.checkUsernameExists(username)
+    }
+
+    fun update(password: String, id: Int){
+        dao.update(password,id)
+    }
+
+
 
 
 }

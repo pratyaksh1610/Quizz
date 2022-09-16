@@ -29,18 +29,25 @@ class LoginFragment : Fragment() {
 
         binding.loginBtn.setOnClickListener {
 
-            viewModel.check(binding.username.text.toString(), binding.password.text.toString())
+            //check if user is registered in the app or not
+            viewModel.checkIfUserIsRegistered(
+                binding.username.text.toString(),
+                binding.password.text.toString()
+            )
                 .observe(viewLifecycleOwner) { loginDetailsList ->
+                    //fetch data and returns list of users if registered
                     //check if user already exist in database
                     if (loginDetailsList.isNotEmpty()) {
                         Toast.makeText(
                             requireContext(),
-                            "User already exists",
+                            "User already exists, Login successful",
                             Toast.LENGTH_LONG
                         ).show()
                         //move to home screen of quiz
                         val intent = Intent(requireContext(), HomeScreenActivity::class.java)
                         intent.putExtra("username", binding.username.text.toString())
+                        intent.putExtra("password", binding.password.text.toString())
+                        intent.putExtra("id", loginDetailsList[0].id.toString())
                         startActivity(intent)
                     } else {
                         Toast.makeText(
@@ -52,6 +59,7 @@ class LoginFragment : Fragment() {
                 }
         }
 
+        //sign up user, if does not exist already
         binding.signUp.setOnClickListener {
             fragmentManager?.beginTransaction()?.apply {
                 replace(R.id.fragmentContainer, SignUpFragment())

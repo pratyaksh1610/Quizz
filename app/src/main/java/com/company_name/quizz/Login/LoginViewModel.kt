@@ -17,9 +17,19 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         repository.insert(login)
     }
 
-    fun check(username:String,password:String): LiveData<List<LoginCredentials>>{
-        return repository.check(username,password)
+    fun checkIfUserIsRegistered(
+        username: String,
+        password: String
+    ): LiveData<List<LoginCredentials>> {
+        return repository.checkIfUserIsRegistered(username, password)
     }
 
+    fun checkUsernameExists(username: String): LiveData<List<LoginCredentials>> {
+        return repository.checkUsernameExists(username)
+    }
+
+    fun update(password: String, id: Int) {
+        repository.update(password,id)
+    }
 
 }

@@ -1,10 +1,7 @@
 package com.company_name.quizz.Login
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface LoginDao {
@@ -15,7 +12,16 @@ interface LoginDao {
 
     //return list of all users having same username and password
     @Query("SELECT * FROM login_table WHERE username LIKE :username AND " + "password LIKE :password")
-    fun check(username:String,password:String): LiveData<List<LoginCredentials>>
+    fun checkIfUserIsRegistered(
+        username: String,
+        password: String
+    ): LiveData<List<LoginCredentials>>
 
+    @Query("SELECT * FROM login_table WHERE username LIKE :username")
+    fun checkUsernameExists(username: String): LiveData<List<LoginCredentials>>
+
+    //update password
+    @Query("UPDATE login_table SET password = :password WHERE id= :id")
+    fun update(password: String, id: Int)
 
 }
