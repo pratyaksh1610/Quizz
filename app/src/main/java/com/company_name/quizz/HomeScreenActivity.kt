@@ -42,7 +42,7 @@ class HomeScreenActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        startActivity(Intent(this, MainActivity::class.java))
+
     }
 
     //when activity is visible and the user interacts with it then this is called

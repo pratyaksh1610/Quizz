@@ -19,19 +19,19 @@ class SubjectActivity : AppCompatActivity() {
 
         binding.Geography.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
-            intent.putExtra("subject", "geography")
+            intent.putExtra("subject", "Geography")
             startActivity(intent)
         }
 
         binding.math.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
-            intent.putExtra("subject", "math")
+            intent.putExtra("subject", "Math")
             startActivity(intent)
         }
 
         binding.literature.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
-            intent.putExtra("subject", "literature")
+            intent.putExtra("subject", "Literature")
             startActivity(intent)
         }
 
