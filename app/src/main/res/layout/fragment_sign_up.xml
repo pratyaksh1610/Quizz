@@ -40,8 +40,10 @@
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editPasswordLayout">
 
 
@@ -60,11 +62,10 @@
                 android:background="@android:color/transparent"
                 android:backgroundTint="@null"
                 android:hint="Username"
-                android:text="a"
+                android:maxLines="1"
                 android:textSize="15sp" />
 
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -78,11 +79,11 @@
             <EditText
                 android:id="@+id/email"
                 android:layout_width="300dp"
-                android:inputType="textEmailAddress"
                 android:layout_height="50dp"
                 android:background="@android:color/transparent"
                 android:hint="Email"
-                android:text="a@gmail.com"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -100,9 +101,10 @@
                 android:id="@+id/password"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:text="a"
                 android:background="@android:color/transparent"
                 android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
                 android:textSize="15sp" />
 
         </LinearLayout>

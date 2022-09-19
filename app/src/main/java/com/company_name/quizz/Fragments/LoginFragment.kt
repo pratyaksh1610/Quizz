@@ -29,34 +29,45 @@ class LoginFragment : Fragment() {
 
         binding.loginBtn.setOnClickListener {
 
-            //check if user is registered in the app or not
-            viewModel.checkIfUserIsRegistered(
-                binding.username.text.toString(),
-                binding.password.text.toString()
-            )
-                .observe(viewLifecycleOwner) { loginDetailsList ->
-                    //fetch data and returns list of users if registered
-                    //check if user already exist in database
-                    if (loginDetailsList.isNotEmpty()) {
-                        Toast.makeText(
-                            requireContext(),
-                            "User already exists, Login successful",
-                            Toast.LENGTH_LONG
-                        ).show()
-                        //move to home screen of quiz
-                        val intent = Intent(requireContext(), HomeScreenActivity::class.java)
-                        intent.putExtra("username", binding.username.text.toString())
-                        intent.putExtra("password", binding.password.text.toString())
-                        intent.putExtra("id", loginDetailsList[0].id.toString())
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(
-                            requireContext(),
-                            "User not found",
-                            Toast.LENGTH_LONG
-                        ).show()
+            if (binding.username.text.toString().trim().isNotEmpty() &&
+                binding.password.text.toString().trim().isNotEmpty()
+            ) {
+
+                //check if user is registered in the app or not
+                viewModel.checkIfUserIsRegistered(
+                    binding.username.text.toString().trim(),
+                    binding.password.text.toString().trim()
+                )
+                    .observe(viewLifecycleOwner) { loginDetailsList ->
+                        //fetch data and returns list of users if registered
+                        //check if user already exist in database
+                        if (loginDetailsList.isNotEmpty()) {
+                            Toast.makeText(
+                                requireContext(),
+                                "Login successful",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            //move to home screen of quiz
+                            val intent = Intent(requireContext(), HomeScreenActivity::class.java)
+                            intent.putExtra("username", binding.username.text.toString().trim())
+                            intent.putExtra("password", binding.password.text.toString().trim())
+                            intent.putExtra("id", loginDetailsList[0].id.toString())
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(
+                                requireContext(),
+                                "User not found",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
-                }
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "All fields must be non empty",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
 
         //sign up user, if does not exist already

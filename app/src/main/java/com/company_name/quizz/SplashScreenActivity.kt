@@ -22,7 +22,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        //for refresh questions
+        //refresh questions everytime app opens
         viewModel.delete()
         val list: List<QuestionEntity> = AllQuestions().insertAll()
         for (i in list.indices) {

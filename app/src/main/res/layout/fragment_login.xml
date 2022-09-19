@@ -44,7 +44,6 @@
         android:gravity="center">
 
         <EditText
-            android:text="a"
             android:id="@+id/username"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -52,6 +51,7 @@
             android:background="@android:color/transparent"
             android:backgroundTint="@null"
             android:hint="Username"
+            android:maxLines="1"
             android:textSize="15sp" />
 
     </LinearLayout>
@@ -64,12 +64,12 @@
         android:gravity="center">
 
         <EditText
-            android:text="a"
             android:id="@+id/password"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="@android:color/transparent"
             android:hint="Password"
+            android:maxLines="1"
             android:textSize="15sp" />
 
     </LinearLayout>

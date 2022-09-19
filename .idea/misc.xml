@@ -10,11 +10,13 @@
         <entry key="..\:/AndroidStudioProjects/Quiz/app/src/main/res/layout/fragment_login.xml" value="0.264" />
         <entry key="..\:/AndroidStudioProjects/Quiz/app/src/main/res/layout/fragment_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_edit_password.xml" value="0.264" />
+        <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_history.xml" value="0.2" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_home_screen.xml" value="0.264" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_main2.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_options.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_question.xml" value="0.25" />
+        <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_result.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_rules.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_splash_screen.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/activity_subject.xml" value="0.264" />
@@ -23,6 +25,7 @@
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/fragment_login.xml" value="0.264" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/fragment_sign_up.xml" value="0.24774774774774774" />
         <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/fragment_splash_screen.xml" value="0.20380434782608695" />
+        <entry key="..\:/Users/praty/OneDrive/Desktop/Quizz/app/src/main/res/layout/recycler_view_history_item.xml" value="0.264" />
       </map>
     </option>
   </component>

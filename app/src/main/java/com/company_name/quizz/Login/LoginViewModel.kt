@@ -28,8 +28,8 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         return repository.checkUsernameExists(username)
     }
 
-    fun update(password: String, id: Int) {
-        repository.update(password,id)
+    fun update(password: String, username: String) {
+        repository.update(password,username)
     }
 
 }

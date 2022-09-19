@@ -6,4 +6,5 @@
     <string name="hello_user_name">Hello, %s</string>
     <string name="chosenSubject">%s Quiz</string>
     <string name="questionNumber">Question %s</string>
+    <string name="status_error"><font fgcolor='#FFFF3B30'>Error</font>  <font fgcolor='#689F38'>Error</font> </string> <!--red-->
 </resources>

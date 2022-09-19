@@ -3,6 +3,7 @@ package com.company_name.quizz
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.company_name.quizz.databinding.ActivitySubjectBinding
 
 class SubjectActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class SubjectActivity : AppCompatActivity() {
         binding = ActivitySubjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val userName = intent.getStringExtra("username").toString()
         binding.backBtn.setOnClickListener {
             onBackPressed()
         }
@@ -20,21 +22,30 @@ class SubjectActivity : AppCompatActivity() {
         binding.Geography.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             intent.putExtra("subject", "Geography")
+            intent.putExtra("user", userName)
             startActivity(intent)
         }
 
         binding.math.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             intent.putExtra("subject", "Math")
+            intent.putExtra("user", userName)
             startActivity(intent)
         }
 
         binding.literature.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             intent.putExtra("subject", "Literature")
+            intent.putExtra("user", userName)
             startActivity(intent)
         }
 
 
     }
+
+    override fun onRestart() {
+        onBackPressed()
+        super.onRestart()
+    }
+
 }

@@ -1,6 +1,8 @@
 package com.company_name.quizz.Fragments
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,21 +31,21 @@ class SignUpFragment : Fragment() {
 
             //check is user name exists to avoid duplicate user name in the app
             //returns list of users if that users exist with the name passed as argument below
-            viewModel.checkUsernameExists(binding.username.text.toString())
+            viewModel.checkUsernameExists(binding.username.text.toString().trim())
                 .observe(viewLifecycleOwner) {
                     if (it.isEmpty()) {
-                        if (binding.username.text.toString().isNotEmpty() &&
-                            binding.password.text.toString().isNotEmpty() &&
-                            binding.email.text.toString().isNotEmpty()
+                        if (binding.username.text.toString().trim().isNotEmpty() &&
+                            binding.password.text.toString().trim().isNotEmpty() &&
+                            binding.email.text.toString().trim().isNotEmpty()
                         ) {
 
                             if (isValidEmailId(binding.email.text.toString().trim())) {
                                 viewModel.insert(
                                     LoginCredentials(
                                         id = null,
-                                        username = binding.username.text.toString(),
-                                        password = binding.password.text.toString(),
-                                        email = binding.email.text.toString()
+                                        username = binding.username.text.toString().trim(),
+                                        password = binding.password.text.toString().trim(),
+                                        email = binding.email.text.toString().trim()
                                     )
                                 )
                                 Toast.makeText(
@@ -52,29 +54,33 @@ class SignUpFragment : Fragment() {
                                     Toast.LENGTH_SHORT
                                 )
                                     .show()
-                                fragmentManager?.beginTransaction()?.apply {
-                                    replace(R.id.fragmentContainer, LoginFragment())
-                                        .commit()
-                                }
+
+                                Handler(Looper.getMainLooper()).postDelayed({
+                                    fragmentManager?.beginTransaction()?.apply {
+                                        replace(R.id.fragmentContainer, LoginFragment())
+                                            .commit()
+                                    }
+                                }, 1000)
+
                             } else {
                                 Toast.makeText(
                                     requireContext(),
                                     "Enter a valid email",
-                                    Toast.LENGTH_LONG
+                                    Toast.LENGTH_SHORT
                                 ).show()
                             }
                         } else {
                             Toast.makeText(
                                 requireContext(),
                                 "All fields must be non empty",
-                                Toast.LENGTH_LONG
+                                Toast.LENGTH_SHORT
                             ).show()
                         }
                     } else {
                         Toast.makeText(
                             requireContext(),
                             "Username already exists",
-                            Toast.LENGTH_LONG
+                            Toast.LENGTH_SHORT
                         )
                             .show()
                     }

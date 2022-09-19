@@ -21,7 +21,7 @@ interface LoginDao {
     fun checkUsernameExists(username: String): LiveData<List<LoginCredentials>>
 
     //update password
-    @Query("UPDATE login_table SET password = :password WHERE id= :id")
-    fun update(password: String, id: Int)
+    @Query("UPDATE login_table SET password = :password WHERE username= :username")
+    fun update(password: String, username: String)
 
 }

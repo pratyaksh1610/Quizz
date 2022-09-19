@@ -1,31 +1,32 @@
-package com.company_name.quizz.Login
+package com.company_name.quizz.History
 
 import android.content.Context
-import android.os.Build.VERSION_CODES.Q
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.company_name.quizz.Login.LoginCredentials
+import com.company_name.quizz.Login.LoginDao
+import com.company_name.quizz.Login.LoginDatabase
 
-@Database(entities = [LoginCredentials::class], version = 1, exportSchema = false)
-abstract class LoginDatabase : RoomDatabase() {
+@Database(entities = [HistoryEntity::class], version = 1, exportSchema = false)
+abstract class HistoryDatabase : RoomDatabase() {
 
-    abstract fun loginDao(): LoginDao
-
+    abstract fun historyDao(): HistoryDao
 
     companion object {
         // Singleton prevents multiple instances of database opening at the
         // same time.
         @Volatile
-        private var INSTANCE: LoginDatabase? = null
+        private var INSTANCE: HistoryDatabase? = null
 
-        fun getDatabase(context: Context): LoginDatabase {
+        fun getDatabase(context: Context): HistoryDatabase {
             // if the INSTANCE is not null, then return it,
             // if it is, then create the database
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    LoginDatabase::class.java,
-                    "login_database"
+                    HistoryDatabase::class.java,
+                    "history_database"
                 ).allowMainThreadQueries().fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 // return instance
