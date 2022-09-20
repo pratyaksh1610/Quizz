@@ -85,14 +85,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Overall points :"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:text="Date :"
             android:textColor="@color/black"
             android:textSize="18sp" />
@@ -154,15 +146,6 @@
             android:textColor="@color/orange"
             android:textSize="18sp" />
 
-
-        <TextView
-            android:id="@+id/total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="25"
-            android:textColor="@color/orange"
-            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/date"

@@ -22,7 +22,7 @@ class QuestionActivity : AppCompatActivity() {
     private var correct = 0
     private var incorrect = 0
     private var points = 0
-    private var totalPointsOfUser = 0
+    private var totalPoints = 0
 
 
     //for saving history of user
@@ -37,7 +37,6 @@ class QuestionActivity : AppCompatActivity() {
 
 
         userName = intent.getStringExtra("user").toString()
-        Toast.makeText(this, userName, Toast.LENGTH_LONG).show()
         //subject chosen from previous activity
         subjectChosen = intent.getStringExtra("subject").toString()
 
@@ -82,6 +81,9 @@ class QuestionActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
 
+//            totalPoints = viewModel1.getTotalPointsOfUser(userName) + points
+//            Toast.makeText(this,totalPoints.toString(),Toast.LENGTH_LONG).show()
+
             viewModel1.insert(
                 HistoryEntity(
                     id = null,
@@ -103,7 +105,7 @@ class QuestionActivity : AppCompatActivity() {
             intent.putExtra("pointScoredCurrent", points)
 
             //total points scored in particular subject
-            intent.putExtra("totalPointsTillDate", totalPointsOfUser)
+            intent.putExtra("totalPointsTillDate", totalPoints)
 
             startActivity(intent)
         } else {

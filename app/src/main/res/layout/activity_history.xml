@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f8f9fa"
     tools:context=".HistoryActivity">
 
 
@@ -53,7 +54,7 @@
             android:layout_margin="5dp"
             android:text="Username :"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +62,7 @@
             android:layout_margin="5dp"
             android:text="Overall Points :"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -82,16 +83,16 @@
             android:layout_margin="5dp"
             android:text="John"
             android:textColor="@color/orange"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/overallPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="34"
+            android:text="0"
             android:textColor="@color/orange"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 

@@ -69,6 +69,7 @@
             android:layout_height="50dp"
             android:background="@android:color/transparent"
             android:hint="Password"
+            android:inputType="textPassword"
             android:maxLines="1"
             android:textSize="15sp" />
 

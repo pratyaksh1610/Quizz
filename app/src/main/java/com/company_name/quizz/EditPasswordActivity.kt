@@ -30,6 +30,8 @@ class EditPasswordActivity : AppCompatActivity() {
                     .isEmpty() || binding.oldPassword.text.toString().isEmpty()
             ) {
                 Toast.makeText(this, "All fields must be non empty", Toast.LENGTH_SHORT).show()
+            } else if (binding.oldPassword.text.toString().trim() != password) {
+                Toast.makeText(this, "Old password is incorrect", Toast.LENGTH_SHORT).show()
             } else if (binding.newPassword.text.toString() == password) {
                 Toast.makeText(this, "Old password is same as New password", Toast.LENGTH_LONG)
                     .show()

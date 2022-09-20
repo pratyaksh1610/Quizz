@@ -6,6 +6,8 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.company_name.quizz.Adapter.HistoryAdapter
 
 import com.company_name.quizz.History.HistoryViewModel
 import com.company_name.quizz.databinding.ActivityHistoryBinding
@@ -24,13 +26,16 @@ class HistoryActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        Toast.makeText(this, intent.getStringExtra("username").toString(), Toast.LENGTH_LONG).show()
         //now show history
         binding.username.text = intent.getStringExtra("username").toString()
+        binding.overallPoints.text =
+            viewModel.getTotalPointsOfUser(intent.getStringExtra("username").toString()).toString()
+
         viewModel.getDataOfUser(binding.username.text.toString()).observe(this) {
 
 //            TODO : bind data in recycler view
-
+            binding.recyclerView.layoutManager = LinearLayoutManager(this)
+            binding.recyclerView.adapter = HistoryAdapter(this, it)
 
         }
 

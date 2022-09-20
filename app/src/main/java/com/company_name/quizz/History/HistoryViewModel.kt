@@ -24,4 +24,8 @@ class HistoryViewModel(application: Application) : AndroidViewModel(application)
         return repository.getDataOfUser(user)
     }
 
+    fun getTotalPointsOfUser(user: String): Int {
+        return repository.getTotalPointsOfUser(user)
+    }
+
 }

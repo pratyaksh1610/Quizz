@@ -6,5 +6,11 @@
     <string name="hello_user_name">Hello, %s</string>
     <string name="chosenSubject">%s Quiz</string>
     <string name="questionNumber">Question %s</string>
-    <string name="status_error"><font fgcolor='#FFFF3B30'>Error</font>  <font fgcolor='#689F38'>Error</font> </string> <!--red-->
+    <string name="status_error"><font fgcolor='#FFFF3B30'>Error</font>  <font fgcolor='#689F38'>Error</font> </string>
+
+    <string name="subject"><font fgcolor='#000000'>Subject : </font>  <font fgcolor='@colors/orange'>%s</font> </string>
+    <string name="earned"><font fgcolor='#000000'>Earned : </font>  <font fgcolor='#689F38'>%s</font> </string>
+    <string name="date"><font fgcolor='#000000'>Date : </font>  <font fgcolor='#689F38'>%s</font> </string>
+    <string name="time"><font fgcolor='#000000'>Time : </font>  <font fgcolor='#689F38'>%s</font> </string>
+
 </resources>

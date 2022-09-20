@@ -16,5 +16,10 @@ class HistoryRepository(private val dao: HistoryDao) {
         return dao.getDataOfUser(user)
     }
 
+    fun getTotalPointsOfUser(user: String): Int{
+        return dao.getTotalPointsOfUser(user)
+    }
+
+
 
 }

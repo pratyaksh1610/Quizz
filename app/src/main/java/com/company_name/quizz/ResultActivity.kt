@@ -32,7 +32,6 @@ class ResultActivity : AppCompatActivity() {
         binding.date.text = currDate
         binding.time.text = currTime
         binding.earned.text = points.toString()
-        binding.total.text = total.toString()
 
         binding.startAgainBtn.setOnClickListener {
             onBackPressed()

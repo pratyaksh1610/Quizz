@@ -10,9 +10,6 @@ data class HistoryEntity(
     var username: String,
     var subject: String,
     var earned: Int,
-//    val totalEarned: Int,
-    val date: String,
-    var time: String
-
-
+    var date: String,
+    var time: String//for overall points to be calculated
 )

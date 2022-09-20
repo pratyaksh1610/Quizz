@@ -12,8 +12,10 @@ interface HistoryDao {
     @Insert(onConflict = REPLACE)
     fun insert(historyEntity: HistoryEntity)
 
-    @Query("SELECT * FROM HISTORY_TABLE WHERE username = :user")
+    @Query("SELECT * FROM HISTORY_TABLE WHERE username = :user ORDER BY time desc")
     fun getDataOfUser(user: String): LiveData<List<HistoryEntity>>
 
+    @Query("select SUM(earned) from history_table where username = :user")
+    fun getTotalPointsOfUser(user: String): Int
 
 }
