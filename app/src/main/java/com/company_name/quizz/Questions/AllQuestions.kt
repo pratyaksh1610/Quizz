@@ -7,7 +7,7 @@ class AllQuestions {
     fun insertAll(): List<QuestionEntity> {
 
         val iList: MutableList<QuestionEntity> = mutableListOf()
-/*  91,2,1951609,9944,97*/
+
         val q1 = QuestionEntity(
             id = null,
             question = "Which one of the following is not a prime number?",
@@ -15,7 +15,7 @@ class AllQuestions {
             op2 = "61",
             op3 = "71",
             op4 = "91",
-            answer = "31",
+            answer = "91",
             subject = "math"
         )
         val q2 = QuestionEntity(
@@ -35,7 +35,7 @@ class AllQuestions {
             op2 = "1951609",
             op3 = "18362619",
             op4 = "2031719",
-            answer = "1981709",
+            answer = "1951609",
             subject = "math"
         )
         val q4 = QuestionEntity(
@@ -45,7 +45,7 @@ class AllQuestions {
             op2 = "9768",
             op3 = "9988",
             op4 = "9944",
-            answer = "8888",
+            answer = "9944",
             subject = "math"
         )
         val q5 = QuestionEntity(
@@ -55,7 +55,7 @@ class AllQuestions {
             op2 = "81",
             op3 = "93",
             op4 = "97",
-            answer = "33",
+            answer = "97",
             subject = "math"
         )
         val q6 = QuestionEntity(
