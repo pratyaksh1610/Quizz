@@ -36,12 +36,12 @@
 * Clone the forked repository to your local machine.
 
 ```markdown
-https://github.com/your-username/Notes_App.git
+https://github.com/your-username/Quizz.git
 ```
 
 * Add upstream URL 
 ```markdown
-https://github.com/pratyaksh1610/Notes_App.git
+https://github.com/pratyaksh1610/Quizz.git
 ```
 
 * Create a new branch
