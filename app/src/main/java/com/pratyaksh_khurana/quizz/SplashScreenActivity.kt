@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.activity.viewModels
+import com.pratyaksh_khurana.quizz.databinding.ActivitySplashScreenBinding
 import com.pratyaksh_khurana.quizz.Questions.AllQuestions
 import com.pratyaksh_khurana.quizz.Questions.QuestionEntity
 import com.pratyaksh_khurana.quizz.Questions.QuestionViewModel
-import com.pratyaksh_khurana.quizz.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
