@@ -67,6 +67,18 @@ class HomeScreenActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
+        val dialog = AlertDialog.Builder(this)
+            .setCancelable(false)
+            .setTitle("Alert !")
+            .setIcon(R.drawable.logout_icon)
+            .setMessage("Are you sure you want to Logout ?")
+            .setNegativeButton("NO") { _, _ ->
+
+            }
+            .setPositiveButton("YES") { _, _ ->
+                startActivity(Intent(this, MainActivity::class.java))
+            }.show()
+
     }
 
     //when activity is visible and the user interacts with it then this is called
