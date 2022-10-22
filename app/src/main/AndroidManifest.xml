@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.company_name.quizz">
+    package="com.pratyaksh_khurana.quizz">
 
     <application
         android:allowBackup="true"
@@ -14,13 +14,13 @@
         android:theme="@style/Theme.Quizz"
         tools:targetApi="31">
         <activity
-            android:name=".HistoryActivity"
+            android:name="com.pratyaksh_khurana.quizz.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultActivity"
+            android:name="com.pratyaksh_khurana.quizz.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.pratyaksh_khurana.quizz.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,29 +29,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuestionActivity"
+            android:name="com.pratyaksh_khurana.quizz.QuestionActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SubjectActivity"
+            android:name="com.pratyaksh_khurana.quizz.SubjectActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RulesActivity"
+            android:name="com.pratyaksh_khurana.quizz.RulesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".EditPasswordActivity"
+            android:name="com.pratyaksh_khurana.quizz.EditPasswordActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".HomeScreenActivity"
+            android:name="com.pratyaksh_khurana.quizz.HomeScreenActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.pratyaksh_khurana.quizz.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
     </application>
