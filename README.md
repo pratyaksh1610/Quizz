@@ -4,7 +4,7 @@
 ## Try app ♥️
 ***You can Install and test latest Quiz app below 👇*** <br> 
 
-### Get Apk [Download here](https://raw.githubusercontent.com/pratyaksh1610/Quizz/main/app/app-debug.apk)
+### Get Apk [Google Play Store](https://play.google.com/store/apps/details?id=com.pratyaksh_khurana.quizz)
 ------------
 
 ## ⚙️ Features
